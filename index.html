@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bill-container">
+        <header class="bill-header">
+            <h1 class="shop-name">M.S MOBILE</h1>
+            <p><strong>Address:</strong> Luna Nager Bus Stop, Thadagam Road, Edayarpalayam, Coimbatore - 641025</p>
+            <p><strong>Contact:</strong> 8248108883</p>
+        </header>
+
+        <div class="bill-body">
+            <form id="billingForm">
+                <div class="customer-details">
+                    <div class="form-group">
+                        <label for="customerName">Customer Name:</label>
+                        <input type="text" id="customerName" placeholder="Enter customer name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Phone Number:</label>
+                        <input type="text" id="customerPhone" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="product-details">
+                    <div class="form-group">
+                        <label for="productName">Product:</label>
+                        <select id="productName" required>
+                            <option value="Charger">Charger</option>
+                            <option value="Mobile">Mobile</option>
+                            <option value="Bluetooth">Bluetooth</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        <input type="text" id="customProduct" placeholder="Specify product if 'Others'">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imeiNumber">IMEI Number:</label>
+                        <input type="text" id="imeiNumber" placeholder="Enter IMEI (optional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" placeholder="Enter quantity" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" placeholder="Enter price" required>
+                    </div>
+                </div>
+
+                <div class="billing-summary">
+                    <h2>Billing Summary</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>IMEI</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="productDisplay">-</td>
+                                <td id="imeiDisplay">-</td>
+                                <td id="quantityDisplay">-</td>
+                                <td>₹<span id="priceDisplay">0</span></td>
+                                <td>₹<span id="totalDisplay">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="footer">
+                    <div class="seal-sign-boxes">
+                        <div class="seal-box">Seal</div>
+                        <div class="signature-box">Signature</div>
+                    </div>
+                    <p class="thankyou-message">Thank You! Visit Again!</p>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" class="btn generate" onclick="generateBill()">Generate Bill</button>
+                    <button type="button" class="btn print" onclick="window.print()">Print</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

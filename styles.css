@@ -1,0 +1,144 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #333;
+}
+
+/* A5 Layout */
+@media print {
+    body {
+        width: 14.8cm;
+        height: 21cm;
+        margin: 0;
+        padding: 0;
+    }
+    .buttons {
+        display: none;
+    }
+}
+
+/* Container */
+.bill-container {
+    width: 14.8cm;
+    height: 20cm; /* Leave 1cm space at the bottom */
+    margin: auto;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+/* Header */
+.bill-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.shop-name {
+    color: #28a745; /* Green heading for shop name */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.bill-header p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    flex: 1;
+    font-size: 12px;
+}
+
+input, select {
+    flex: 2;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Footer */
+.seal-sign-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.seal-box, .signature-box {
+    width: 48%;
+    height: 150px; /* Increased height for Seal and Signature boxes */
+    border: 2px dashed #333;
+    text-align: center;
+    line-height: 150px; /* Match height */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.thankyou-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn.generate {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn.print {
+    background-color: #007bff;
+    color: #fff;
+}
